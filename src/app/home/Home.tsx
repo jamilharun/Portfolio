@@ -1,10 +1,13 @@
-import React from "react";
 import Header from "../../components/home/Header";
 import ProfileCard from "../../components/home/ProfileCard";
 import ShowCaseCards from "../../components/home/ShowCaseCards";
 import IntroNote from "../../components/home/IntroNote";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import forest from "../../assets/sample/forest.jpg";
+import { CiUser } from "react-icons/ci";
+import { FaHtml5, FaPython } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiTypescript, SiKotlin } from "react-icons/si";
 
 export default function Home() {
   return (
@@ -74,16 +77,13 @@ export default function Home() {
       </div>
       {/* 3nd section */}
       <div className="relative object-cover">
-        <div className="bg-gray-800 w-full rotate-2 flex flex-col p-10  text-white rounded-r-2xl rounded-t-2xl ">
+        <div className="bg-gray-800 w-full rotate-2 flex flex-col p-10  text-white rounded-r-2xl rounded-t-2xl -z-10   ">
           <div className="flex flex-row">
             {/* introductory note */}
             <IntroNote />
             {/* skills */}
             <div className="w-1/2 ">
               <h1 className="text-5xl">Skills...</h1>
-              <p>
-                <label htmlFor=""></label>
-              </p>
               <div className="capitalize flex flex-col gap-y-3 text-3xl text-black">
                 <div className="bg-gray-300 p-4 rounded-2xl flex flex-row justify-between items-center">
                   <div>Programming: </div>
@@ -104,17 +104,44 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center py-20">
-            <div className="bg-gray-700 w-40 h-40">{/* about me icon */}</div>
-            <h1 className="text-5xl flex justify-center items-center p-5">
-              <span className="text-2xl px-3">Checkout</span> About Me
-            </h1>
+          <div className="flex flex-row justify-between items-center">
+            {/* programming languages */}
+            <div className="grid grid-cols-3 gap-10">
+              <div className="flex flex-col justify-center items-center gap-y-5">
+                <FaHtml5 className="size-40" />
+                <p>HTML</p>
+              </div>
+              <div className="flex flex-col justify-center items-center gap-y-5">
+                <RiTailwindCssFill className="size-40" />
+                <p>TailwindCSS</p>
+              </div>
+              <div className="flex flex-col justify-center items-center gap-y-5">
+                <SiTypescript className="size-40" />
+                <p>Typescript</p>
+              </div>
+              <div className="flex flex-col justify-center items-center gap-y-5">
+                <SiKotlin className="size-40" />
+                <p>Kotlin</p>
+              </div>
+              <div className="flex flex-col justify-center items-center gap-y-5">
+                <FaPython className="size-40" />
+                <p>Python</p>
+              </div>
+            </div>
+            <div className="flex flex-col justify-center items-center py-20 ">
+              <div className="bg-gray-700 w-40 h-40 rounded-4xl">
+                <CiUser className="w-full h-full" />
+              </div>
+              <h1 className="text-5xl flex justify-center items-center p-5">
+                <span className="text-2xl px-3">Checkout</span> About Me
+              </h1>
+            </div>
           </div>
         </div>
         {/* new section */}
 
         {/* footer */}
-        <div className="flex flex-row justify-between items-center bg-purple-300 rounded-t-2xl font-poppins p-3">
+        <div className="flex flex-row justify-between items-center bg-purple-300 rounded-t-2xl font-poppins p-3 z-10">
           <div className="">
             <h1 className="text-3xl ">Portfolio - Jamil Harun</h1>
           </div>
